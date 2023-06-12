@@ -1,0 +1,40 @@
+app_name: msevidence.application
+app_version: msevidence.version
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 20MB
+
+testOnly:
+  endpoints:
+    enabled: true
+
+services:
+  clamAvLander:
+    baseUri: "http://localhost:9935"
+  img2pdf:
+    baseUri: "http://localhost:9936"
+  word2pdf:
+    baseUri: "http://localhost:9937"
+
+aws:
+  s3:
+    default-endpoint: http://localhost:4566
+    bucket-name: atw-claim
+  encryption:
+    enabled: true
+    kmsOverride: http://localhost:4566
+    dataKey: alias/test_request_id
+cloud:
+  aws:
+    stack:
+      auto: false
+    region:
+      static: us-east-1
+      auto: false
+    credentials:
+      instanceProfile: false
+      accessKey: foo
+      secretKey: bar

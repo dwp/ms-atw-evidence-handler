@@ -1,0 +1,46 @@
+app_name: @project.artifactId@
+app_version: @project.version@
+
+server:
+  port: 9013
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 20MB
+testOnly:
+  endpoints:
+    enabled: ${TESTONLY_ENDPOINTS_ENABLED:false}
+
+services:
+  clamAvLander:
+    baseUri: ${CLAMAV_URI}
+  img2pdf:
+    baseUri: ${IMG2PDF_URI}
+  word2pdf:
+    baseUri: ${WORD2PDF_URI}
+
+aws:
+  s3:
+    default-endpoint: ${AWS_S3_DEFAULT_ENDPOINT:}
+    bucket-name: ${AWS_BUCKET_NAME}
+  encryption:
+    enabled: ${AWS_S3_ENCRYPT_ENABLE:true}
+    kmsOverride: ${AWS_ENCRYPTION_KMS_OVERRIDE:}
+    dataKey: ${AWS_ENCRYPTION_DATA_KEY:}
+cloud:
+  aws:
+    stack:
+      auto: false
+    region:
+      static: ${AWS_REGION}
+      auto: false
+    credentials:
+      instanceProfile: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

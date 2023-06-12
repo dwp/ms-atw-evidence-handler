@@ -1,0 +1,5 @@
+{
+  "extends": [
+    "gitlab>dwp/engineering/renovate//shared-configs/dwp-health-configuration-override"
+  ]
+}
