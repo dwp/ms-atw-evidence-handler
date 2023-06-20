@@ -26,4 +26,11 @@
         <packageUrl regex="true">^pkg:maven/org\.bouncycastle.*$</packageUrl>
         <cve>CVE-2022-45146</cve>
     </suppress>
+    <suppress>
+        <notes><![CDATA[
+   file name: fasterxml* // this is temporary until fasterxml releases a fix.
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/com\.fasterxml.*$</packageUrl>
+        <cve>CVE-2023-35116</cve>
+    </suppress>
 </suppressions>

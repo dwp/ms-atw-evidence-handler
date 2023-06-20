@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.9.0 - (2023-06-20)
+* Update all fragments to latest version
+* Update dependency versions
+* Update distroless version
+* Update cron schedule to run weekdays only
+
 ## 1.8.0 - (2023-05-26)
 * adding open source functionality for a github repository
 * Update all fragments to latest version
