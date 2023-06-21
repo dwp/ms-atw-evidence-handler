@@ -2,7 +2,6 @@ package uk.gov.dwp.health.atw.msevidencehandler.controllers;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
@@ -40,7 +39,7 @@ public class FileToPdfController {
   @PostMapping(value = "/convert",
       produces = "application/json")
   public ResponseEntity<ConversionResponse> convertMultipleFile(
-      @RequestParam("file") MultipartFile file, @RequestParam("userId") UUID userId)
+      @RequestParam("file") MultipartFile file, @RequestParam("userId") String userId)
       throws IOException, URISyntaxException, AvException {
 
     logger.info("Executing the convert endpoint");

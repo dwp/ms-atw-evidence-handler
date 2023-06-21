@@ -37,7 +37,7 @@ public class S3Repository {
     this.objectMapper = objectMapper;
   }
 
-  public String uploadFile(UUID userId, String base64File) {
+  public String uploadFile(String userId, String base64File) {
     try {
       byte[] bytesForFile = s3Properties.isEncryptionEnabled()
           ? objectMapper.writeValueAsBytes(kmsService.encrypt(base64File))
@@ -52,7 +52,7 @@ public class S3Repository {
       } else {
         logger.info("File encrypted and will now upload to S3");
       }
-      String key = "evidence/" + userId.toString() + "/" + UUID.randomUUID();
+      String key = "evidence/" + userId + "/" + UUID.randomUUID();
       amazonS3.putObject(s3Properties.getBucketName(),
           key,
           new ByteArrayInputStream(bytesForFile),

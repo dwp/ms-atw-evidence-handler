@@ -46,7 +46,7 @@ public class S3RepositoryTest {
   @MockBean
   private ObjectMapper objectMapper;
 
-  UUID uuid = UUID.randomUUID();
+  String uuid = UUID.randomUUID().toString();
   String base64 = "base64";
 
   @Test

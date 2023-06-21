@@ -10,7 +10,7 @@
     </parent>
     <groupId>uk.gov.dwp.health.atw</groupId>
     <artifactId>ms-evidence-handler</artifactId>
-    <version>1.9.0</version>
+    <version>1.9.1</version>
     <name>evidence-handler</name>
     <description>Evidence Handler for Access to Work</description>
 

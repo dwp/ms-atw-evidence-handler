@@ -3,7 +3,6 @@ package uk.gov.dwp.health.atw.msevidencehandler.services;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.Map;
-import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;
@@ -69,7 +68,7 @@ public class FileToPdfService {
     antiVirusScanConnector.scanForVirus(file);
   }
 
-  public String upload(UUID userId, String convertedFile) {
+  public String upload(String userId, String convertedFile) {
     return s3Service.uploadToS3(convertedFile, userId);
   }
 }

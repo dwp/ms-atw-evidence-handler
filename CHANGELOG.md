@@ -1,17 +1,24 @@
 # Changelog
 
+## 1.9.1 - (2023-06-21)
+
+* fix: allow any string for user id on /convert
+
 ## 1.9.0 - (2023-06-20)
+
 * Update all fragments to latest version
 * Update dependency versions
 * Update distroless version
 * Update cron schedule to run weekdays only
 
 ## 1.8.0 - (2023-05-26)
+
 * adding open source functionality for a github repository
 * Update all fragments to latest version
 * Update dependency versions
 
 ## 1.7.0 - (2023-03-6)
+
 * Removed pages-tech-docs fragment and relevant pipeline stage
 * Dependency updates
 * Fragment updates
@@ -19,6 +26,7 @@
 * Springboot version bump (2.7.7)
 
 ## 1.6.0 - (2022-12-6)
+
 * Improve error logging when uploading evidence for claims
 * Update fragments to latest versions
 

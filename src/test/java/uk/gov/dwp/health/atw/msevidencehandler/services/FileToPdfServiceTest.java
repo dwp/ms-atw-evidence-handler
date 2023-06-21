@@ -276,11 +276,11 @@ public class FileToPdfServiceTest {
   @Test
   public void uploadFileToS3Successful() {
 
-    when(s3Service.uploadToS3(any(String.class), any(UUID.class)))
+    when(s3Service.uploadToS3(any(String.class), any(String.class)))
         .thenReturn("uploaded file key");
 
     assertEquals("uploaded file key",
-        fileToPdfService.upload(UUID.randomUUID(), "uploaded file key"));
+        fileToPdfService.upload(UUID.randomUUID().toString(), "uploaded file key"));
 
     verify(s3Service, times(1)).uploadToS3(any(), any());
   }
@@ -289,11 +289,11 @@ public class FileToPdfServiceTest {
   @Test
   public void uploadFileToS3failed() {
 
-    when(s3Service.uploadToS3(any(String.class), any(UUID.class)))
+    when(s3Service.uploadToS3(any(String.class), any(String.class)))
         .thenThrow(SdkClientException.class);
 
     assertThrows(SdkClientException.class,
-        () -> fileToPdfService.upload(UUID.randomUUID(), "uploaded file key"));
+        () -> fileToPdfService.upload(UUID.randomUUID().toString(), "uploaded file key"));
 
     verify(s3Service, times(1)).uploadToS3(any(), any());
   }

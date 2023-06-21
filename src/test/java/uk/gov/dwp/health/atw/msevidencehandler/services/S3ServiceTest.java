@@ -34,7 +34,7 @@ public class S3ServiceTest {
   @Test
   @DisplayName("upload image file successfully - jpeg")
   void uploadImageFile() {
-    UUID uuid = UUID.randomUUID();
+    String uuid = UUID.randomUUID().toString();
 
     when(s3Repository.uploadFile(any(), any())).thenReturn(
         FILE_KEY);
