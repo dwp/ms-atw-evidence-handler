@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.10.0 - (2023-07-11)
+* Update spring logging for production
+* Update fragment
+
 ## 1.9.1 - (2023-06-21)
 
 * fix: allow any string for user id on /convert

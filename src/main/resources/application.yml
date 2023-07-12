@@ -9,6 +9,11 @@ spring:
     multipart:
       max-file-size: 10MB
       max-request-size: 20MB
+
+  logging:
+    level:
+      ROOT: INFO
+
 testOnly:
   endpoints:
     enabled: ${TESTONLY_ENDPOINTS_ENABLED:false}

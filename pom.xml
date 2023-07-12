@@ -10,7 +10,7 @@
     </parent>
     <groupId>uk.gov.dwp.health.atw</groupId>
     <artifactId>ms-evidence-handler</artifactId>
-    <version>1.9.1</version>
+    <version>1.10.0</version>
     <name>evidence-handler</name>
     <description>Evidence Handler for Access to Work</description>
 
@@ -27,7 +27,8 @@
         <aws.version>1.12.402</aws.version>
         <dwp.data-cryptography.version>2.8.0-e92423de</dwp.data-cryptography.version>
         <dwp.securestrings>1.5.3</dwp.securestrings>
-        <snakeyaml.version>1.33</snakeyaml.version> <!-- Override default version used within Spring Boot (1.30) to fix CVE-2022-25857 -->
+        <snakeyaml.version>1.33
+        </snakeyaml.version> <!-- Override default version used within Spring Boot (1.30) to fix CVE-2022-25857 -->
         <jackson-databind.version>2.13.5</jackson-databind.version>
     </properties>
     <dependencies>
