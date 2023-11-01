@@ -1,5 +1,11 @@
 # Changelog
 
+# 1.13.0 - (2023-10-30)
+* Updated dependency versions
+* Update distroless version
+* Update fragments
+* Update pipeline to v3.1
+
 ## 1.12.0 - (2023-08-23)
 * Updates to project-metadata.yaml
 * Update base docker image
