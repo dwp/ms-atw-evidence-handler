@@ -1,5 +1,11 @@
 # Changelog
 
+# 1.14.0 - (2024-02-12)
+* Fixed CVE issues
+* Update fragments
+* Updated trivy suppression
+* Added retry: 2 to the create-project-badges of the pipeline
+
 # 1.13.0 - (2023-10-30)
 * Updated dependency versions
 * Update distroless version
