@@ -1,5 +1,10 @@
 # Changelog
 
+# 1.15.0 - (2024-06-04)
+* Updated fragments
+* Remove saas references for hcs runners
+* Dependancy suppressions
+* 
 # 1.14.0 - (2024-02-12)
 * Fixed CVE issues
 * Update fragments

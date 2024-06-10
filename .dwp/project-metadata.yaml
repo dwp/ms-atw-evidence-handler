@@ -6,10 +6,10 @@ project:
   - project_id: 27135900
     component_name: ms-evidence-handler
 
-    version: 1.14.0
+    version: 1.15.0
 
     last_verified:
-      date: "2024-02-12"
+      date: "2024-06-04"
       name: "@ruta.radiya1"
 
     tags:
