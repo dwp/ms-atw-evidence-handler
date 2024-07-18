@@ -1,5 +1,11 @@
 # Changelog
 
+# 1.16.0 - (2024-07-16)
+* Upgrade to Java 17
+* Upgrade to Spring boot 3.2.5
+* Updated dependency Suppressions
+* Updated fragments
+
 # 1.15.0 - (2024-06-04)
 * Updated fragments
 * Remove saas references for hcs runners

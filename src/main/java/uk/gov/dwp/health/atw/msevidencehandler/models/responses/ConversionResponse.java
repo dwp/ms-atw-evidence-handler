@@ -1,8 +1,7 @@
 package uk.gov.dwp.health.atw.msevidencehandler.models.responses;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.util.List;
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
