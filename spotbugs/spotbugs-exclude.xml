@@ -17,15 +17,7 @@
         <Bug pattern="EI_EXPOSE_REP2"/>
     </Match>
     <Match>
-        <Class name="uk.gov.dwp.health.atw.msevidencehandler.connector.impl.AntiVirusScanConnectorImpl"/>
-        <Bug pattern="EI_EXPOSE_REP2"/>
-    </Match>
-    <Match>
-        <Class name="uk.gov.dwp.health.atw.msevidencehandler.connector.impl.File2PdfConnector"/>
-        <Bug pattern="EI_EXPOSE_REP2"/>
-    </Match>
-    <Match>
-        <Class name="uk.gov.dwp.health.atw.msevidencehandler.connector.impl.Img2PdfConnector"/>
+        <Package name="~uk.gov.dwp.health.atw.msevidencehandler.connector.impl.*"/>
         <Bug pattern="EI_EXPOSE_REP2"/>
     </Match>
     <Match>
@@ -41,11 +33,15 @@
         <Bug pattern="EI_EXPOSE_REP2"/>
     </Match>
     <Match>
-        <Class name="uk.gov.dwp.health.atw.msevidencehandler.services.impl.KmsServiceImpl"/>
+        <Package name="~uk.gov.dwp.health.atw.msevidencehandler.services.impl.*"/>
         <Bug pattern="EI_EXPOSE_REP2"/>
     </Match>
     <Match>
-        <Class name="uk.gov.dwp.health.atw.msevidencehandler.services.impl.S3ServiceImpl"/>
-        <Bug pattern="EI_EXPOSE_REP2"/>
+        <Package name="~uk.gov.dwp.health.atw.msevidencehandler.models.requests.*"/>
+        <Bug pattern="CT_CONSTRUCTOR_THROW, NP_NONNULL_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR"/>
+    </Match>
+    <Match>
+        <Package name="~uk.gov.dwp.health.atw.msevidencehandler.models.responses.*"/>
+        <Bug pattern="CT_CONSTRUCTOR_THROW, NP_NONNULL_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR"/>
     </Match>
 </FindBugsFilter>

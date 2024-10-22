@@ -5,28 +5,28 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.5</version>
+        <version>3.3.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>uk.gov.dwp.health.atw</groupId>
     <artifactId>ms-evidence-handler</artifactId>
-    <version>1.17.0</version>
+    <version>1.18.0</version>
     <name>evidence-handler</name>
     <description>Evidence Handler for Access to Work</description>
 
     <properties>
         <java.version>17</java.version>
-        <plugin.spotbugs.maven.version>4.7.3.4</plugin.spotbugs.maven.version>
-        <plugin.spotbugs.version>4.7.3</plugin.spotbugs.version>
-        <dwp.encoded-log.version>3.0.0-dfda47f2</dwp.encoded-log.version>
-        <checkstyle.plugin.version>3.3.1</checkstyle.plugin.version>
+        <plugin.spotbugs.maven.version>4.8.6.2</plugin.spotbugs.maven.version>
+        <plugin.spotbugs.version>4.8.6</plugin.spotbugs.version>
+        <checkstyle.plugin.version>3.4.0</checkstyle.plugin.version>
         <checkstyle.version>10.16.0</checkstyle.version>
-        <plugin.jacoco.version>0.8.10</plugin.jacoco.version>
-        <plugin.surefire.version>3.2.5</plugin.surefire.version>
-        <plugin.owasp.version>10.0.2</plugin.owasp.version>
+        <plugin.jacoco.version>0.8.12</plugin.jacoco.version>
+        <plugin.surefire.version>3.3.1</plugin.surefire.version>
+        <plugin.owasp.version>10.0.3</plugin.owasp.version>
         <pitest.version>1.16.1</pitest.version>
         <pitest-plugin.version>1.2.1</pitest-plugin.version>
         <aws.version>1.12.732</aws.version>
+        <dwp.encoded-log.version>3.0.0-dfda47f2</dwp.encoded-log.version>
         <dwp.data-cryptography.version>3.0.0-fee8a798</dwp.data-cryptography.version>
         <dwp.securestrings>1.5.3</dwp.securestrings>
         <jackson-databind.version>2.17.0</jackson-databind.version>
