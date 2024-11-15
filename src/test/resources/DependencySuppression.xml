@@ -11,4 +11,13 @@
         <cve>CVE-2024-29857</cve>
         <cve>CVE-2022-45146</cve>
     </suppress>
+    <suppress>
+        <notes>
+            <![CDATA[
+       file name: Spring-web-6.1.11.jar:
+       ]]>
+        </notes>
+        <cve>CVE-2024-38816</cve>
+        <cve>CVE-2024-38820</cve>
+    </suppress>
 </suppressions>
