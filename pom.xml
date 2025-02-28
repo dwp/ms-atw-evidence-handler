@@ -5,34 +5,43 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.3.3</version>
+        <version>3.4.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>uk.gov.dwp.health.atw</groupId>
     <artifactId>ms-evidence-handler</artifactId>
-    <version>1.19.0</version>
+    <version>1.20.0</version>
     <name>evidence-handler</name>
     <description>Evidence Handler for Access to Work</description>
 
     <properties>
         <java.version>17</java.version>
-        <plugin.spotbugs.maven.version>4.8.6.2</plugin.spotbugs.maven.version>
+        <plugin.spotbugs.maven.version>4.8.6.6</plugin.spotbugs.maven.version>
         <plugin.spotbugs.version>4.8.6</plugin.spotbugs.version>
         <checkstyle.plugin.version>3.4.0</checkstyle.plugin.version>
         <checkstyle.version>10.16.0</checkstyle.version>
         <plugin.jacoco.version>0.8.12</plugin.jacoco.version>
-        <plugin.surefire.version>3.3.1</plugin.surefire.version>
-        <plugin.owasp.version>10.0.3</plugin.owasp.version>
-        <pitest.version>1.16.1</pitest.version>
+        <plugin.surefire.version>3.5.2</plugin.surefire.version>
+        <plugin.owasp.version>12.1.0</plugin.owasp.version>
+        <pitest.version>1.17.3</pitest.version>
         <pitest-plugin.version>1.2.1</pitest-plugin.version>
         <aws.version>1.12.732</aws.version>
         <dwp.encoded-log.version>3.0.0-dfda47f2</dwp.encoded-log.version>
-        <dwp.data-cryptography.version>3.0.0-fee8a798</dwp.data-cryptography.version>
+        <dwp.data-cryptography.version>3.1.0-8859d262</dwp.data-cryptography.version>
         <dwp.securestrings>1.5.3</dwp.securestrings>
-        <jackson-databind.version>2.17.0</jackson-databind.version>
+        <jackson-databind.version>2.18.2</jackson-databind.version>
         <jackson.databind.nullable.version>0.2.6</jackson.databind.nullable.version>
+        <!--fixes CVE errors for repo-->
+        <bc-fips.version>1.0.2.5</bc-fips.version>
+        <logback.version>1.5.15</logback.version> <!-- To fix CVE-2024-12798 and CVE-2024-12801 -->
+        <json-smart.version>2.5.2</json-smart.version> <!-- To fix CVE-2024-57699 -->
     </properties>
     <dependencies>
+        <dependency>
+            <groupId>net.minidev</groupId>
+            <artifactId>json-smart</artifactId>
+            <version>${json-smart.version}</version>
+        </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
@@ -116,6 +125,17 @@
             <groupId>uk.gov.dwp.health.crypto</groupId>
             <artifactId>data-cryptography</artifactId>
             <version>${dwp.data-cryptography.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.bouncycastle</groupId>
+                    <artifactId>bc-fips</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bc-fips</artifactId>
+            <version>${bc-fips.version}</version>
         </dependency>
         <dependency>
             <groupId>uk.gov.dwp.crypto</groupId>

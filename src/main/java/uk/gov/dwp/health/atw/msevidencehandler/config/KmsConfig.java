@@ -3,7 +3,6 @@ package uk.gov.dwp.health.atw.msevidencehandler.config;
 import com.amazonaws.regions.Regions;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import uk.gov.dwp.health.atw.msevidencehandler.config.properties.CryptoConfigProperties;
@@ -30,7 +29,6 @@ public class KmsConfig {
   }
 
   @SneakyThrows
-  @Autowired
   @Bean
   public CryptoDataManager cryptoDataManager(final CryptoConfig cryptoConfig) {
     try {

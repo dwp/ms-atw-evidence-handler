@@ -1,5 +1,9 @@
 # Changelog
 
+# 1.20.0 - (2025-02-25)
+* Resolved gitlab vulnerabilities
+* Fixed pipeline
+
 # 1.19.0 - (2024-11-13)
 * Updated dependency suppressions
 * Updated distroless version
