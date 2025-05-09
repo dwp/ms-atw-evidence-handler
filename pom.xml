@@ -5,36 +5,34 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.4.1</version>
+        <version>3.4.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>uk.gov.dwp.health.atw</groupId>
     <artifactId>ms-evidence-handler</artifactId>
-    <version>1.20.0</version>
+    <version>1.22.0</version>
     <name>evidence-handler</name>
     <description>Evidence Handler for Access to Work</description>
 
     <properties>
         <java.version>17</java.version>
-        <plugin.spotbugs.maven.version>4.8.6.6</plugin.spotbugs.maven.version>
-        <plugin.spotbugs.version>4.8.6</plugin.spotbugs.version>
-        <checkstyle.plugin.version>3.4.0</checkstyle.plugin.version>
+        <plugin.spotbugs.maven.version>4.9.3.0</plugin.spotbugs.maven.version>
+        <plugin.spotbugs.version>4.9.3</plugin.spotbugs.version>
+        <checkstyle.plugin.version>3.6.0</checkstyle.plugin.version>
         <checkstyle.version>10.16.0</checkstyle.version>
-        <plugin.jacoco.version>0.8.12</plugin.jacoco.version>
-        <plugin.surefire.version>3.5.2</plugin.surefire.version>
-        <plugin.owasp.version>12.1.0</plugin.owasp.version>
-        <pitest.version>1.17.3</pitest.version>
-        <pitest-plugin.version>1.2.1</pitest-plugin.version>
-        <aws.version>1.12.732</aws.version>
+        <plugin.jacoco.version>0.8.13</plugin.jacoco.version>
+        <plugin.surefire.version>3.5.3</plugin.surefire.version>
+        <plugin.owasp.version>12.1.1</plugin.owasp.version>
+        <pitest.version>1.19.1</pitest.version>
+        <pitest-plugin.version>1.2.2</pitest-plugin.version>
+        <aws.version>1.12.782</aws.version>
         <dwp.encoded-log.version>3.0.0-dfda47f2</dwp.encoded-log.version>
         <dwp.data-cryptography.version>3.1.0-8859d262</dwp.data-cryptography.version>
         <dwp.securestrings>1.5.3</dwp.securestrings>
-        <jackson-databind.version>2.18.2</jackson-databind.version>
+        <jackson-databind.version>2.19.0</jackson-databind.version>
         <jackson.databind.nullable.version>0.2.6</jackson.databind.nullable.version>
         <!--fixes CVE errors for repo-->
         <bc-fips.version>1.0.2.5</bc-fips.version>
-        <logback.version>1.5.15</logback.version> <!-- To fix CVE-2024-12798 and CVE-2024-12801 -->
-        <json-smart.version>2.5.2</json-smart.version> <!-- To fix CVE-2024-57699 -->
     </properties>
     <dependencies>
         <dependency>
@@ -45,6 +43,11 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
+            <version>${jackson-databind.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
             <version>${jackson-databind.version}</version>
         </dependency>
         <dependency>
@@ -118,7 +121,7 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-params</artifactId>
-            <version>5.8.2</version>
+            <version>5.12.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -284,12 +287,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
-                <version>3.12.0</version>
+                <version>3.21.0</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>3.0.0</version>
+                <version>3.9.0</version>
             </plugin>
             <plugin>
                 <artifactId>dependency-check-maven</artifactId>

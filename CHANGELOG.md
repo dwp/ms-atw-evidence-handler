@@ -1,5 +1,14 @@
 # Changelog
 
+# 1.22.0 (2025-04-30)
+* Updating dependencies
+* Updated distroless version
+
+# 1.21.0 (2025-03-11)
+
+* chore: update ecr push jobs ([b2f6f26](https://gitlab.com/dwp/health/atw/components/ms-evidence-handler/-/commit/b2f6f26))
+* [skip ci] ([326d704](https://gitlab.com/dwp/health/atw/components/ms-evidence-handler/-/commit/326d704))
+
 # 1.20.0 - (2025-02-25)
 * Resolved gitlab vulnerabilities
 * Fixed pipeline
