@@ -1,6 +1,9 @@
 # Changelog
 
 # 1.22.0 (2025-04-30)
+* Adopt pipeline execution policy changes
+
+# 1.22.0 (2025-04-30)
 * Updating dependencies
 * Updated distroless version
 

@@ -5,12 +5,12 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.4.5</version>
+        <version>3.4.6</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>uk.gov.dwp.health.atw</groupId>
     <artifactId>ms-evidence-handler</artifactId>
-    <version>1.22.0</version>
+    <version>1.23.0</version>
     <name>evidence-handler</name>
     <description>Evidence Handler for Access to Work</description>
 
@@ -23,9 +23,9 @@
         <plugin.jacoco.version>0.8.13</plugin.jacoco.version>
         <plugin.surefire.version>3.5.3</plugin.surefire.version>
         <plugin.owasp.version>12.1.1</plugin.owasp.version>
-        <pitest.version>1.19.1</pitest.version>
+        <pitest.version>1.19.3</pitest.version>
         <pitest-plugin.version>1.2.2</pitest-plugin.version>
-        <aws.version>1.12.782</aws.version>
+        <aws.version>1.12.783</aws.version>
         <dwp.encoded-log.version>3.0.0-dfda47f2</dwp.encoded-log.version>
         <dwp.data-cryptography.version>3.1.0-8859d262</dwp.data-cryptography.version>
         <dwp.securestrings>1.5.3</dwp.securestrings>
