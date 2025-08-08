@@ -1,5 +1,12 @@
 # Changelog
 
+# 1.24.0 (2025-08-6)
+* Adopt catalog-info and remove project-metadata
+* Automate test branch pickup
+* stub clam-av-file-lander
+* springboot minor version bump
+* dependency updates
+
 # 1.22.0 (2025-04-30)
 * Adopt pipeline execution policy changes
 

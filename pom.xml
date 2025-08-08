@@ -5,12 +5,12 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.4.6</version>
+        <version>3.5.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>uk.gov.dwp.health.atw</groupId>
     <artifactId>ms-evidence-handler</artifactId>
-    <version>1.23.0</version>
+    <version>1.24.0</version>
     <name>evidence-handler</name>
     <description>Evidence Handler for Access to Work</description>
 
@@ -32,6 +32,7 @@
         <jackson-databind.version>2.19.0</jackson-databind.version>
         <jackson.databind.nullable.version>0.2.6</jackson.databind.nullable.version>
         <!--fixes CVE errors for repo-->
+        <commons-lang3.version>3.18.0</commons-lang3.version> <!-- To fix CVE-2025-48924 -->
         <bc-fips.version>1.0.2.5</bc-fips.version>
     </properties>
     <dependencies>
@@ -297,7 +298,7 @@
             <plugin>
                 <artifactId>dependency-check-maven</artifactId>
                 <configuration>
-                    <cveValidForHours>12</cveValidForHours>
+                    <nvdValidForHours>12</nvdValidForHours>
                     <failBuildOnCVSS>4</failBuildOnCVSS>
                     <suppressionFile>src/test/resources/DependencySuppression.xml</suppressionFile>
                 </configuration>
