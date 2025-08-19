@@ -1,5 +1,10 @@
 # Changelog
 
+# 1.25.0 (2025-08-15)
+* Updating dependencies
+* Updated distroless version
+* Updated dynatrace instance
+
 # 1.24.0 (2025-08-6)
 * Adopt catalog-info and remove project-metadata
 * Automate test branch pickup
